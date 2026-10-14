@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multi Timezone Digital Clock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Digital Clocks — Multiple Time Zones</h1>
+      <div class="controls">
+        <div class="add-zone">
+          <input list="tz-list" id="tz-input" placeholder="Cari atau masukkan zona IANA (mis. Asia/Jakarta)" />
+          <datalist id="tz-list"></datalist>
+          <button id="add-btn" class="btn">Tambah</button>
+        </div>
+
+        <div class="options">
+          <label class="toggle">
+            <input type="checkbox" id="hour-format" />
+            <span>24 jam</span>
+          </label>
+          <button id="reset-btn" class="btn ghost">Reset default</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="clocks" class="clocks-grid" aria-live="polite"></section>
+
+    <footer class="app-footer">
+      <p>Built with JavaScript Intl API — enter IANA time zones like "Europe/London" or "America/New_York".</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
